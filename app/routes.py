@@ -1,9 +1,11 @@
-#import render_template, redirect and url_for functions from flask
-from flask import render_template, redirect, url_for
+#import render_template, redirect, url_for and request functions from flask
+from flask import render_template, redirect, url_for, request
 #import app variable from app package
 from app import app
 #import LoginForm class from our forms.py file
 from app.forms import LoginForm
+#import the query function from our db.py file
+from app.db import query
 
 #create an association for the URL /
 @app.route('/')
@@ -65,3 +67,37 @@ def login():
         return redirect(url_for('index'))
 
     return render_template('login.html', title='Sign In', form=form)
+
+#create an association for the URL /animals
+@app.route('/animals')
+
+#create the browse page to display animals from the database with filters
+def animals():
+    #read the filter choices from the URL e.g. /animals?species=dog&size=small
+    species = request.args.get('species', '')
+    size = request.args.get('size', '')
+
+    #build the SQL query - only show animals that are not adopted yet
+    sql = ("SELECT a.name, a.species, a.breed, a.age_months, a.sex, a.size, "
+           "a.good_with_kids, a.image_url, a.status, s.name AS shelter, s.town "
+           "FROM animals a JOIN shelters s ON a.shelter_id = s.shelter_id "
+           "WHERE a.status <> 'adopted'")
+    params = []
+
+    #add a filter for species if the user picked one
+    if species:
+        sql += " AND a.species = %s"
+        params.append(species)
+
+    #add a filter for size if the user picked one
+    if size:
+        sql += " AND a.size = %s"
+        params.append(size)
+
+    sql += " ORDER BY a.date_listed DESC, a.name"
+
+    #run the query against the PostgreSQL database
+    results = query(sql, params)
+
+    return render_template('animals.html', title='Browse Pets', animals=results,
+                           species=species, size=size)
