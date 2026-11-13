@@ -15,12 +15,19 @@
         <a class="logo" href="{{ url_for('index') }}">🐾 Pet Adoption Finder</a>
         <nav>
             <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('enquiry') }}">Adopt</a>
             <a href="{{ url_for('about') }}">About Us</a>
             <a href="{{ url_for('login') }}">Login</a>
         </nav>
     </header>
 
     <main>
+        {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p class="message">{{ message }}</p>
+        {% endfor %}
+        {% endwith %}
+
         {% block content %}{% endblock %}
     </main>
 

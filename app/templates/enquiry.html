@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="intro">
+        <h1>Adoption Enquiry</h1>
+        <p>Found a pet you love? Send the shelter an enquiry.</p>
+    </div>
+
+    <div class="enquiry-layout">
+        <div class="box">
+            <p class="label">Application form</p>
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.email.label }}<br>
+                    {{ form.email(size=32) }}
+                    {% for error in form.email.errors %}
+                    <br><span class="error">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.animal.label }}<br>
+                    {{ form.animal() }}
+                    {% for error in form.animal.errors %}
+                    <br><span class="error">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.message.label }}<br>
+                    {{ form.message(rows=5) }}
+                    {% for error in form.message.errors %}
+                    <br><span class="error">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>{{ form.submit(class_='button') }}</p>
+            </form>
+        </div>
+
+        <div class="box">
+            <p class="label">Recent enquiries</p>
+            <table>
+                <tr>
+                    <th>Adopter</th>
+                    <th>Animal</th>
+                    <th>Status</th>
+                    <th>Sent</th>
+                </tr>
+                {% for e in recent %}
+                <tr>
+                    <td>{{ e.first_name }}</td>
+                    <td>{{ e.animal }}</td>
+                    <td>{{ e.status }}</td>
+                    <td>{{ e.submitted }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
