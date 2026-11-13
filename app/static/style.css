@@ -1,0 +1,309 @@
+/* Pet Adoption Finder - stylesheet */
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f6f1e7;
+    color: #2b2b2b;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #1d3557;
+}
+
+/* Header and navigation */
+header {
+    background-color: #1d3557;
+    border-bottom: 4px solid #c9a227;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+}
+
+.logo {
+    color: #c9a227;
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #c9a227;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px 50px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro p {
+    color: #6f6a60;
+    font-size: 18px;
+}
+
+/* Boarding pass banner */
+.ticket {
+    display: flex;
+    background-color: white;
+    border: 1px solid #d9cfbd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 30px;
+}
+
+.ticket-main {
+    flex: 3;
+    padding: 25px 30px;
+    border-left: 10px solid #c1121f;
+}
+
+.ticket-main h1 {
+    margin: 8px 0;
+}
+
+.ticket-main p {
+    color: #6f6a60;
+}
+
+.ticket-stub {
+    flex: 1;
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-left: 3px dashed #f6f1e7;
+}
+
+.ticket-stub .label {
+    color: #c9a227;
+}
+
+.place {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 4px 0 12px;
+}
+
+/* Small uppercase labels */
+.label {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6f6a60;
+    margin: 0;
+}
+
+/* Pet passport cards */
+.passports {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.passport {
+    background-color: white;
+    border: 1px solid #d9cfbd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.passport-top {
+    background-color: #1d3557;
+    color: #c9a227;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 15px;
+}
+
+.passport-body {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+}
+
+.passport-body p {
+    margin: 0 0 8px;
+}
+
+.photo {
+    width: 110px;
+    height: 130px;
+    background-color: #e8eef5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1d3557;
+}
+
+/* Red "Available" stamp */
+.stamp {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    border: 3px solid #c1121f;
+    color: #c1121f;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: rotate(-10deg);
+}
+
+/* About and login boxes */
+.box {
+    background-color: white;
+    border: 1px solid #d9cfbd;
+    border-radius: 10px;
+    padding: 10px 30px 25px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.steps {
+    display: flex;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    border: 3px solid #1d3557;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.step span {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #c1121f;
+}
+
+.step strong {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1d3557;
+}
+
+.form-box {
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d9cfbd;
+    border-radius: 5px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #c1121f;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+/* Filter bar on the Browse Pets page */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    background-color: white;
+    border: 1px solid #d9cfbd;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+}
+
+.filter-bar div {
+    flex: 1;
+}
+
+.results {
+    color: #6f6a60;
+    margin-bottom: 15px;
+}
+
+/* Message shown after an enquiry is sent */
+.message {
+    background-color: #e3f1eb;
+    border-left: 5px solid #1d3557;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Enquiry page layout and table */
+.enquiry-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    background-color: #1d3557;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    border-bottom: 1px solid #d9cfbd;
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

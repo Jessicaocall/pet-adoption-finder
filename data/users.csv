@@ -1,0 +1,13 @@
+first_name,last_name,email,password,role,shelter_id
+Aoife,Murphy,aoife.murphy@example.com,Password123!,adopter,
+Ciaran,Walsh,ciaran.walsh@example.com,Password123!,adopter,
+Niamh,O'Brien,niamh.obrien@example.com,Password123!,adopter,
+Sean,Kelly,sean.kelly@example.com,Password123!,adopter,
+Grainne,Byrne,grainne.byrne@example.com,Password123!,adopter,
+Darragh,Ryan,darragh.ryan@example.com,Password123!,adopter,
+Orla,McCarthy,orla.mccarthy@example.com,Password123!,adopter,
+Emma,Collins,emma.collins@example.com,Password123!,shelter_staff,1
+Liam,Daly,liam.daly@example.com,Password123!,shelter_staff,2
+Siobhan,Burke,siobhan.burke@example.com,Password123!,shelter_staff,3
+Padraig,Doyle,padraig.doyle@example.com,Password123!,shelter_staff,4
+Ruth,Kennedy,ruth.kennedy@example.com,Password123!,shelter_staff,5

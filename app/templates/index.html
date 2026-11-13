@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="ticket">
+        <div class="ticket-main">
+            <p class="label">Boarding pass · Admit one</p>
+            <h1>Your ticket to a new best friend</h1>
+            <p>Every animal here is waiting at a rescue shelter in Cork. Find the one for you and start their journey home.</p>
+        </div>
+        <div class="ticket-stub">
+            <p class="label">From</p>
+            <p class="place">Cork Shelters</p>
+            <p class="label">To</p>
+            <p class="place">Your Home</p>
+        </div>
+    </div>
+
+    <div class="passports">
+        {% for animal in animals %}
+        <div class="passport">
+            <div class="passport-top">Pet Passport</div>
+            <div class="passport-body">
+                <div class="photo">{{ animal.emoji }}</div>
+                <div>
+                    <p class="label">Name</p>
+                    <p class="name">{{ animal.name }}</p>
+                    <p class="label">Breed</p>
+                    <p>{{ animal.breed }}</p>
+                    <p class="label">Age</p>
+                    <p>{{ animal.age }}</p>
+                    <p class="label">Location</p>
+                    <p>{{ animal.location }}</p>
+                </div>
+                <div class="stamp">Available</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

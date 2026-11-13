@@ -1,0 +1,2 @@
+FLASK_APP=petfinder.py
+FLASK_DEBUG=1

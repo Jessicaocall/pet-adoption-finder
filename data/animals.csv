@@ -1,0 +1,26 @@
+shelter_id,name,species,breed,age_months,sex,size,good_with_kids,description,image_url,status
+1,Bella,dog,Labrador cross,24,female,large,true,Friendly and loves long walks.,🐕,available
+1,Oscar,cat,Domestic shorthair,48,male,small,false,Calm indoor cat who enjoys a quiet home.,🐈,available
+2,Murphy,dog,Border Collie,8,male,medium,true,Energetic puppy who is quick to learn.,🐕,available
+4,Clover,rabbit,Lionhead,12,female,small,true,Gentle rabbit who likes to be handled.,🐇,available
+5,Max,dog,German Shepherd,36,male,large,false,Loyal and protective - needs an experienced owner.,🐕,available
+3,Luna,cat,Siamese,18,female,small,true,Chatty and affectionate.,🐈,available
+2,Rocky,dog,Jack Russell,60,male,small,true,Small dog with a big personality.,🐕,available
+1,Daisy,dog,Beagle,30,female,medium,true,Loves people and other dogs.,🐕,available
+5,Milo,cat,Ginger tabby,6,male,small,true,Playful kitten.,🐈,available
+4,Pepper,rabbit,Netherland Dwarf,9,female,small,false,Shy at first but warms up quickly.,🐇,available
+3,Buster,dog,Boxer,42,male,large,true,Goofy and full of energy.,🐕,available
+2,Willow,cat,Maine Coon,72,female,medium,true,Big fluffy gentle giant.,🐈,available
+1,Toby,dog,Cocker Spaniel,54,male,medium,true,Sweet older boy who loves cuddles.,🐕,reserved
+5,Nala,dog,Greyhound,48,female,large,true,Retired racer who loves the sofa.,🐕,available
+3,Smokey,cat,British Shorthair,84,male,medium,false,Independent and relaxed.,🐈,available
+4,Biscuit,dog,Shih Tzu,96,male,small,true,Gentle senior dog.,🐕,available
+2,Poppy,rabbit,Holland Lop,14,female,small,true,Curious and friendly.,🐇,available
+1,Ziggy,cat,Tuxedo,24,male,small,true,Loves to play with toys.,🐈,available
+5,Ruby,dog,Staffordshire Bull Terrier,36,female,medium,true,Affectionate and loyal.,🐕,available
+3,Coco,dog,Cavapoo,10,female,small,true,Friendly puppy - great with families.,🐕,available
+4,Shadow,cat,Black domestic shorthair,30,male,small,false,Quiet cat who prefers adults.,🐈,available
+2,Bailey,dog,Golden Retriever,20,male,large,true,Loves water and fetch.,🐕,available
+1,Hazel,rabbit,Rex,24,female,medium,true,Calm rabbit with soft fur.,🐇,adopted
+5,Simba,cat,Bengal,15,male,medium,true,Very active and curious.,🐈,available
+3,Lola,dog,Dachshund,40,female,small,true,Loves walks and naps.,🐕,available
