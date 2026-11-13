@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="intro">
+        <h1>Browse Pets</h1>
+        <p>Every animal below is stored in our PostgreSQL database.</p>
+    </div>
+
+    <!-- filter form - sends the choices to /animals as ?species=...&size=... -->
+    <form class="filter-bar" action="{{ url_for('animals') }}" method="get">
+        <div>
+            <label class="label" for="species">Species</label>
+            <select name="species" id="species">
+                <option value="">All</option>
+                {% for option in ['dog', 'cat', 'rabbit'] %}
+                <option value="{{ option }}" {% if species == option %}selected{% endif %}>{{ option|capitalize }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label class="label" for="size">Size</label>
+            <select name="size" id="size">
+                <option value="">All</option>
+                {% for option in ['small', 'medium', 'large'] %}
+                <option value="{{ option }}" {% if size == option %}selected{% endif %}>{{ option|capitalize }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="button" type="submit">Filter</button>
+    </form>
+
+    <p class="results">{{ animals|length }} animal(s) found</p>
+
+    <div class="passports">
+        {% for animal in animals %}
+        <div class="passport">
+            <div class="passport-top">Pet Passport</div>
+            <div class="passport-body">
+                <div class="photo">{{ animal.image_url }}</div>
+                <div>
+                    <p class="label">Name</p>
+                    <p class="name">{{ animal.name }}</p>
+                    <p class="label">Breed</p>
+                    <p>{{ animal.breed }}</p>
+                    <p class="label">Age / Size</p>
+                    <p>{{ animal.age_months }} months · {{ animal.size|capitalize }}</p>
+                    <p class="label">Shelter</p>
+                    <p>{{ animal.shelter }}, {{ animal.town }}</p>
+                </div>
+                <div class="stamp">{{ animal.status }}</div>
+            </div>
+        </div>
+        {% else %}
+        <p>No animals match those filters.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
